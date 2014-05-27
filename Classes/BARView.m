@@ -121,10 +121,10 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
         view.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         [self addSubview:view];
         
-        self.topDividerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, CGRectGetWidth(rect), 0.5)];
+        self.topDividerView = [[UIView alloc] initWithFrame:[self rectForTopDividerView]];
         [view addSubview:self.topDividerView];
         
-        self.bottomDividerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, CGRectGetHeight(rect) - kBarAxisViewDefaultHeight - 0.5, CGRectGetWidth(rect), 0.5)];
+        self.bottomDividerView = [[UIView alloc] initWithFrame:[self rectForBottomDividerView]];
         [view addSubview:self.bottomDividerView];
         
         view;
@@ -181,6 +181,8 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
     self.selectionIndicatorView.frame = [self rectForSelectionIndicatorView];
     self.selectionIndicatorView.backgroundColor = self.selectionIndicatorColor;
     self.gridContainerView.frame = [self rectForGridContainerView];
+    self.topDividerView.frame = [self rectForTopDividerView];
+    self.bottomDividerView.frame = [self rectForBottomDividerView];
     
     [self bringSubviewToFront:self.gridContainerView];
     [self bringSubviewToFront:self.selectionIndicatorView];
@@ -376,6 +378,24 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
     
     CGFloat x = self.contentOffset.x + floor(CGRectGetWidth(self.frame) / 2.0) - floor(kBarViewDefaultBarWidth / 2.0);
     CGFloat y = 0.0;
+    return CGRectMake(x, y, width, height);
+}
+
+- (CGRect)rectForTopDividerView;
+{
+    CGFloat x = CGRectGetMinX(self.bounds);
+    CGFloat y = 0.0;
+    CGFloat width = CGRectGetWidth(self.bounds);
+    CGFloat height = 0.5;
+    return CGRectMake(x, y, width, height);
+}
+
+- (CGRect)rectForBottomDividerView;
+{
+    CGFloat x = CGRectGetMinX(self.bounds);
+    CGFloat y = CGRectGetHeight(self.bounds) - kBarAxisViewDefaultHeight - 0.5;
+    CGFloat width = CGRectGetWidth(self.bounds);
+    CGFloat height = 0.5;
     return CGRectMake(x, y, width, height);
 }
 
