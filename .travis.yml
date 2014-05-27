@@ -1,0 +1,9 @@
+language: objective-c
+xcode_workspace: "Bars.xcworkspace"
+xcode_scheme: "Bars"
+before_install:
+  - brew update
+  - brew remove --force xctool
+  - brew install xctool --HEAD
+cache: bundler
+script: bundle exec rake

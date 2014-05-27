@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A13428BA19113E63002CD8C5 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A13428B919113E63002CD8C5 /* Main_iPad.storyboard */; };
+		A15A70F3191173D500946134 /* BARView.m in Sources */ = {isa = PBXBuildFile; fileRef = A15A70F1191173D500946134 /* BARView.m */; };
+		A1668688192BE83300B8987D /* BARSelectionIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1668687192BE83300B8987D /* BARSelectionIndicatorView.m */; };
+		A17D2DBD191BE65100C5D3BE /* BARView+UIScrollViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A17D2DBC191BE65100C5D3BE /* BARView+UIScrollViewDelegate.m */; };
+		A1CD701D191136D50094A8DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1CD701C191136D50094A8DD /* Foundation.framework */; };
+		A1CD701F191136D50094A8DD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1CD701E191136D50094A8DD /* CoreGraphics.framework */; };
+		A1CD7021191136D50094A8DD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1CD7020191136D50094A8DD /* UIKit.framework */; };
+		A1CD7027191136D50094A8DD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A1CD7025191136D50094A8DD /* InfoPlist.strings */; };
+		A1CD7029191136D50094A8DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CD7028191136D50094A8DD /* main.m */; };
+		A1CD702D191136D50094A8DD /* BARAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CD702C191136D50094A8DD /* BARAppDelegate.m */; };
+		A1CD7030191136D50094A8DD /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1CD702E191136D50094A8DD /* Main_iPhone.storyboard */; };
+		A1CD7036191136D50094A8DD /* BARMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CD7035191136D50094A8DD /* BARMasterViewController.m */; };
+		A1CD7039191136D50094A8DD /* BARDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CD7038191136D50094A8DD /* BARDetailViewController.m */; };
+		A1CD703B191136D50094A8DD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1CD703A191136D50094A8DD /* Images.xcassets */; };
+		AEB146B338294FEB8CF623CC /* libPods-Bars.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8197881EAA29480084692B1D /* libPods-Bars.a */; };
+		B8E545258A8A4759BE58B208 /* libPods-Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 282D27C803D44690A8D182AA /* libPods-Example.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		282D27C803D44690A8D182AA /* libPods-Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5597AB9649914688AAC208FC /* Pods-Bars.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bars.xcconfig"; path = "../Pods/Pods-Bars.xcconfig"; sourceTree = "<group>"; };
+		8197881EAA29480084692B1D /* libPods-Bars.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bars.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A13428B919113E63002CD8C5 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
+		A15A70F0191173D500946134 /* BARView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BARView.h; path = ../Classes/BARView.h; sourceTree = "<group>"; };
+		A15A70F1191173D500946134 /* BARView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BARView.m; path = ../Classes/BARView.m; sourceTree = "<group>"; };
+		A1668686192BE83300B8987D /* BARSelectionIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BARSelectionIndicatorView.h; path = ../Classes/BARSelectionIndicatorView.h; sourceTree = "<group>"; };
+		A1668687192BE83300B8987D /* BARSelectionIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BARSelectionIndicatorView.m; path = ../Classes/BARSelectionIndicatorView.m; sourceTree = "<group>"; };
+		A17D2DBB191BE65100C5D3BE /* BARView+UIScrollViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BARView+UIScrollViewDelegate.h"; path = "../Classes/BARView+UIScrollViewDelegate.h"; sourceTree = "<group>"; };
+		A17D2DBC191BE65100C5D3BE /* BARView+UIScrollViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BARView+UIScrollViewDelegate.m"; path = "../Classes/BARView+UIScrollViewDelegate.m"; sourceTree = "<group>"; };
+		A1CD7019191136D50094A8DD /* Bars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bars.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1CD701C191136D50094A8DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A1CD701E191136D50094A8DD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A1CD7020191136D50094A8DD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A1CD7024191136D50094A8DD /* Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Example-Info.plist"; sourceTree = "<group>"; };
+		A1CD7026191136D50094A8DD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A1CD7028191136D50094A8DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A1CD702A191136D50094A8DD /* Example-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Example-Prefix.pch"; sourceTree = "<group>"; };
+		A1CD702B191136D50094A8DD /* BARAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BARAppDelegate.h; sourceTree = "<group>"; };
+		A1CD702C191136D50094A8DD /* BARAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BARAppDelegate.m; sourceTree = "<group>"; };
+		A1CD702F191136D50094A8DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		A1CD7034191136D50094A8DD /* BARMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BARMasterViewController.h; sourceTree = "<group>"; };
+		A1CD7035191136D50094A8DD /* BARMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BARMasterViewController.m; sourceTree = "<group>"; };
+		A1CD7037191136D50094A8DD /* BARDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BARDetailViewController.h; sourceTree = "<group>"; };
+		A1CD7038191136D50094A8DD /* BARDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BARDetailViewController.m; sourceTree = "<group>"; };
+		A1CD703A191136D50094A8DD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A1CD7041191136D50094A8DD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		ABA06F57F627438491B813E9 /* Pods-Example.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.xcconfig"; path = "../Pods/Pods-Example.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1CD7016191136D50094A8DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1CD701F191136D50094A8DD /* CoreGraphics.framework in Frameworks */,
+				A1CD7021191136D50094A8DD /* UIKit.framework in Frameworks */,
+				A1CD701D191136D50094A8DD /* Foundation.framework in Frameworks */,
+				B8E545258A8A4759BE58B208 /* libPods-Example.a in Frameworks */,
+				AEB146B338294FEB8CF623CC /* libPods-Bars.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A15A70ED191173CC00946134 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				A15A70F2191173D500946134 /* Bars */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		A15A70F2191173D500946134 /* Bars */ = {
+			isa = PBXGroup;
+			children = (
+				A15A70F0191173D500946134 /* BARView.h */,
+				A15A70F1191173D500946134 /* BARView.m */,
+				A17D2DBB191BE65100C5D3BE /* BARView+UIScrollViewDelegate.h */,
+				A17D2DBC191BE65100C5D3BE /* BARView+UIScrollViewDelegate.m */,
+				A1668686192BE83300B8987D /* BARSelectionIndicatorView.h */,
+				A1668687192BE83300B8987D /* BARSelectionIndicatorView.m */,
+			);
+			name = Bars;
+			path = ../Bars;
+			sourceTree = "<group>";
+		};
+		A1CD7010191136D50094A8DD = {
+			isa = PBXGroup;
+			children = (
+				A1CD7022191136D50094A8DD /* Example */,
+				A1CD701B191136D50094A8DD /* Frameworks */,
+				A1CD701A191136D50094A8DD /* Products */,
+				A15A70ED191173CC00946134 /* Vendor */,
+				ABA06F57F627438491B813E9 /* Pods-Example.xcconfig */,
+				5597AB9649914688AAC208FC /* Pods-Bars.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		A1CD701A191136D50094A8DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1CD7019191136D50094A8DD /* Bars.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1CD701B191136D50094A8DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1CD701C191136D50094A8DD /* Foundation.framework */,
+				A1CD701E191136D50094A8DD /* CoreGraphics.framework */,
+				A1CD7020191136D50094A8DD /* UIKit.framework */,
+				A1CD7041191136D50094A8DD /* XCTest.framework */,
+				282D27C803D44690A8D182AA /* libPods-Example.a */,
+				8197881EAA29480084692B1D /* libPods-Bars.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A1CD7022191136D50094A8DD /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				A1CD702B191136D50094A8DD /* BARAppDelegate.h */,
+				A1CD702C191136D50094A8DD /* BARAppDelegate.m */,
+				A1CD702E191136D50094A8DD /* Main_iPhone.storyboard */,
+				A13428B919113E63002CD8C5 /* Main_iPad.storyboard */,
+				A1CD7034191136D50094A8DD /* BARMasterViewController.h */,
+				A1CD7035191136D50094A8DD /* BARMasterViewController.m */,
+				A1CD7037191136D50094A8DD /* BARDetailViewController.h */,
+				A1CD7038191136D50094A8DD /* BARDetailViewController.m */,
+				A1CD703A191136D50094A8DD /* Images.xcassets */,
+				A1CD7023191136D50094A8DD /* Supporting Files */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		A1CD7023191136D50094A8DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1CD7024191136D50094A8DD /* Example-Info.plist */,
+				A1CD7025191136D50094A8DD /* InfoPlist.strings */,
+				A1CD7028191136D50094A8DD /* main.m */,
+				A1CD702A191136D50094A8DD /* Example-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1CD7018191136D50094A8DD /* Bars */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1CD7051191136D50094A8DD /* Build configuration list for PBXNativeTarget "Bars" */;
+			buildPhases = (
+				3AFCCDDF93654194AFF2A7BE /* Check Pods Manifest.lock */,
+				A1CD7015191136D50094A8DD /* Sources */,
+				A1CD7016191136D50094A8DD /* Frameworks */,
+				A1CD7017191136D50094A8DD /* Resources */,
+				CE35688B88E8471FABE5B455 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bars;
+			productName = Example;
+			productReference = A1CD7019191136D50094A8DD /* Bars.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1CD7011191136D50094A8DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BAR;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Karma;
+			};
+			buildConfigurationList = A1CD7014191136D50094A8DD /* Build configuration list for PBXProject "Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A1CD7010191136D50094A8DD;
+			productRefGroup = A1CD701A191136D50094A8DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1CD7018191136D50094A8DD /* Bars */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1CD7017191136D50094A8DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1CD703B191136D50094A8DD /* Images.xcassets in Resources */,
+				A13428BA19113E63002CD8C5 /* Main_iPad.storyboard in Resources */,
+				A1CD7030191136D50094A8DD /* Main_iPhone.storyboard in Resources */,
+				A1CD7027191136D50094A8DD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3AFCCDDF93654194AFF2A7BE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CE35688B88E8471FABE5B455 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Pods-Bars-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1CD7015191136D50094A8DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A15A70F3191173D500946134 /* BARView.m in Sources */,
+				A17D2DBD191BE65100C5D3BE /* BARView+UIScrollViewDelegate.m in Sources */,
+				A1668688192BE83300B8987D /* BARSelectionIndicatorView.m in Sources */,
+				A1CD7036191136D50094A8DD /* BARMasterViewController.m in Sources */,
+				A1CD702D191136D50094A8DD /* BARAppDelegate.m in Sources */,
+				A1CD7029191136D50094A8DD /* main.m in Sources */,
+				A1CD7039191136D50094A8DD /* BARDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A1CD7025191136D50094A8DD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1CD7026191136D50094A8DD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A1CD702E191136D50094A8DD /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1CD702F191136D50094A8DD /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A1CD704F191136D50094A8DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A1CD7050191136D50094A8DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A1CD7052191136D50094A8DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5597AB9649914688AAC208FC /* Pods-Bars.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Example/Example-Prefix.pch";
+				INFOPLIST_FILE = "Example/Example-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A1CD7053191136D50094A8DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5597AB9649914688AAC208FC /* Pods-Bars.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Example/Example-Prefix.pch";
+				INFOPLIST_FILE = "Example/Example-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1CD7014191136D50094A8DD /* Build configuration list for PBXProject "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1CD704F191136D50094A8DD /* Debug */,
+				A1CD7050191136D50094A8DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1CD7051191136D50094A8DD /* Build configuration list for PBXNativeTarget "Bars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1CD7052191136D50094A8DD /* Debug */,
+				A1CD7053191136D50094A8DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A1CD7011191136D50094A8DD /* Project object */;
+}
