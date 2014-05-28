@@ -94,7 +94,7 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
         view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         [self addSubview:view];
         
-        self.heightFractionForVisibleBars = CGRectGetHeight(view.frame) / maxValue;
+        self.heightFractionForVisibleBars = [self heightFractionWithAvailableHeight:CGRectGetHeight(view.frame) maxValue:maxValue];
         for (NSUInteger index = 0; index < numberOfBars; index++) {
             UIView *bar = [[UIView alloc] initWithFrame:[self rectForVisibleBarAtIndex:index]];
             [view addSubview:bar];
@@ -149,7 +149,7 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
     }
     
     CGFloat availableHeight = CGRectGetHeight([self rectForBarsContainerView]);
-    self.heightFractionForVisibleBars = availableHeight / maxValue;
+    self.heightFractionForVisibleBars = [self heightFractionWithAvailableHeight:availableHeight maxValue:maxValue];
     
     for (NSUInteger index = visibleRange.location; index < NSMaxRange(visibleRange); index++) {
         UIView *view = self.barsContainerView.subviews[index];
@@ -188,6 +188,15 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
     [self bringSubviewToFront:self.selectionIndicatorView];
     
     self.contentSize = self.barsContainerView.frame.size;
+}
+
+- (CGFloat)heightFractionWithAvailableHeight:(CGFloat)height maxValue:(CGFloat)maxValue;
+{
+    if (maxValue == 0) {
+        return 0;
+    }
+    
+    return height / maxValue;
 }
 
 - (void)centerContent;
