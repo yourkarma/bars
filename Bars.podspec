@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name             =  "Bars"
   s.version          =  "1.0.0"
   s.summary          =  "iOS view to display bar graphs"
-  s.homepage         =  "https:/github.com/yourkarma/bars"
+  s.homepage         =  "https://github.com/yourkarma/bars"
   s.license          =  { :type => "MIT", :file => "LICENSE" }
   s.authors          =  { "Klaas Pieter Annema" => "klaaspieter@annema.me" }
   s.social_media_url =  "https://twitter.com/klaaspieter"
