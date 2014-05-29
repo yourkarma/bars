@@ -2,7 +2,7 @@
 
 iOS library for displaying bar graphs
 
-![Bars gif](https://www.dropbox.com/s/j83quxeh4wopl0d/bars.gif)
+![Bars gif](https://raw.githubusercontent.com/yourkarma/bars/master/Example/bars.gif)
 
 ## Installation
 
