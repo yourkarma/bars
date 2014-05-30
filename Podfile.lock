@@ -3,20 +3,17 @@ PODS:
   - OCHamcrest (3.0.1)
   - OCMockito (1.2.0):
     - OCHamcrest (~> 3.0)
-  - Reveal-iOS-SDK (1.0.4)
   - Specta (0.2.1)
 
 DEPENDENCIES:
   - Expecta
   - OCMockito
-  - Reveal-iOS-SDK
   - Specta
 
 SPEC CHECKSUMS:
   Expecta: ce8a51b9fad15a2cd573b291cb2909aaed865350
   OCHamcrest: 207233b7d7a44dadd66aca398947cc7e029c9be5
   OCMockito: e4b9564b2b9165a143fd54a41dbfb55595699624
-  Reveal-iOS-SDK: d3c8e109d42219daaa7a6e1ad2de34f0bdbb7a88
   Specta: 9141310f46b1f68b676650ff2854e1ed0b74163a
 
-COCOAPODS: 0.32.1
+COCOAPODS: 0.33.1

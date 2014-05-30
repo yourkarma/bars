@@ -1,0 +1,6 @@
+platform :ios, "7.0"
+
+target "Bars", exclusive: true do
+  pod "Reveal-iOS-SDK"
+end
+
