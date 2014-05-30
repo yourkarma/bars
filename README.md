@@ -17,7 +17,7 @@ Want to try first? Simple:
 ## Usage
 
 BARView is used much the same as UITableView or UICollectionView. Add it to your view hierarchy
-and set a data source that implement the required methods 
+and set a data source that implements the required methods 
 of the [`BARViewDataSource`](https://github.com/yourkarma/bars/blob/master/Classes/BARView.h#L54) 
 formal protocol. 
 
@@ -28,6 +28,10 @@ Call `reloadData` every time your data changes.
 Appearance can be customized using the `barColor`, `selectionIndicatorColor`, `gridColor` and
 `showsSelectionIndicator` properties.
 
+## Inspiration
+
+This project was inspired by the graphs in [Ins & Outs](http://insandoutsapp.com/).
+
 ## License
 
-Bars is available under the MIT license. See the LICENSE file for more info.
+Bars is available under the MIT license. See the [LICENSE](https://github.com/yourkarma/bars/blob/master/LICENSE) file for more info.
