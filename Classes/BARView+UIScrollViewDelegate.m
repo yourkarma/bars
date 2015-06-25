@@ -28,6 +28,7 @@
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView;
 {
     if ([self.delegate respondsToSelector:_cmd]) {
+        [self.delegate scrollViewWillBeginDragging:scrollView];
     }
 }
 
