@@ -185,11 +185,11 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
     self.barsContainerView.frame = [self rectForBarsContainerView];
     self.axisContainerView.frame = [self rectForAxisContainerView];
     self.selectionIndicatorView.frame = [self rectForSelectionIndicatorView];
-    self.selectionIndicatorView.backgroundColor = self.selectionIndicatorColor;
+    self.selectionIndicatorView.color = self.selectionIndicatorColor;
     self.gridContainerView.frame = [self rectForGridContainerView];
     self.topDividerView.frame = [self rectForTopDividerView];
     self.bottomDividerView.frame = [self rectForBottomDividerView];
-    
+
     [self bringSubviewToFront:self.gridContainerView];
     [self bringSubviewToFront:self.selectionIndicatorView];
     

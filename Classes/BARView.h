@@ -28,8 +28,9 @@ extern CGFloat const kBarAxisViewDefaultHeight;
 
 @property (nonatomic, readonly, strong) UIView *barsContainerView;
 @property (nonatomic, readonly, strong) UIView *axisContainerView;
-@property (nonatomic, readonly, strong) BARSelectionIndicatorView *selectionIndicatorView;
 @property (nonatomic, readonly, strong) UIView *gridContainerView;
+
+@property (nonatomic, readonly, strong) BARSelectionIndicatorView *selectionIndicatorView;
 
 @property (nonatomic, readwrite, assign) CGFloat barWidth;
 @property (nonatomic, readwrite, assign) CGFloat axisHeight;

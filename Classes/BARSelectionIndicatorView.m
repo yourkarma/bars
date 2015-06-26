@@ -10,24 +10,57 @@
 
 @implementation BARSelectionIndicatorView
 
+- (instancetype)initWithFrame:(CGRect)frame;
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self configureSelectionIndicatorView];
+    }
+    return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)coder;
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        [self configureSelectionIndicatorView];
+    }
+    return self;
+}
+
+- (void)configureSelectionIndicatorView;
+{
+    self.upwardsArrowSize = CGSizeMake(16.0, 8.0);
+    self.upwardsArrowBottomInset = 0.0;
+    self.backgroundColor = [UIColor clearColor];
+}
+
 - (void)drawRect:(CGRect)rect
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
-    [[UIColor whiteColor] set];
-    
+
     CGRect bounds = self.bounds;
-    CGFloat arrowWidth = 16.0;
-    CGFloat arrowHeight = 8.0;
-    
-    CGContextMoveToPoint(context, floor(CGRectGetMidX(bounds) - (arrowWidth / 2.0)), CGRectGetHeight(bounds));
-    CGContextAddLineToPoint(context, floor(CGRectGetMidX(bounds)), CGRectGetHeight(bounds) - arrowHeight);
-    CGContextAddLineToPoint(context, floor(CGRectGetMidX(bounds) + (arrowWidth / 2.0)), CGRectGetHeight(bounds));
+    CGFloat arrowWidth = self.upwardsArrowSize.width;
+    CGFloat arrowHeight = self.upwardsArrowSize.height;
+
+    CGPoint lines[3] = {
+        CGPointMake(floor(CGRectGetMidX(bounds) - (arrowWidth / 2.0)), CGRectGetHeight(bounds) - self.upwardsArrowBottomInset),
+        CGPointMake(floor(CGRectGetMidX(bounds)), CGRectGetHeight(bounds) - arrowHeight - self.upwardsArrowBottomInset),
+        CGPointMake(floor(CGRectGetMidX(bounds) + (arrowWidth / 2.0)), CGRectGetHeight(bounds) - self.upwardsArrowBottomInset)
+    };
+
+    [[UIColor whiteColor] set];
+    CGContextSetShadowWithColor(context, self.upwardsArrowShadow.shadowOffset, self.upwardsArrowShadow.shadowBlurRadius, [self.upwardsArrowShadow.shadowColor CGColor]);
+    CGContextAddLines(context, lines, 3);
     CGContextFillPath(context);
+
+    [self.color set];
+    CGContextFillRect(context, self.bounds);
 }
 
-- (void)setBackgroundColor:(UIColor *)backgroundColor;
+- (void)setColor:(UIColor *)color
 {
-    [super setBackgroundColor:backgroundColor];
+    _color = color;
     [self setNeedsDisplay];
 }
 

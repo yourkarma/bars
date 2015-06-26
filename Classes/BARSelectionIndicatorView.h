@@ -10,4 +10,10 @@
 
 @interface BARSelectionIndicatorView : UIView
 
+@property (nonatomic, readwrite, copy) UIColor *color;
+
+@property (nonatomic, readwrite, assign) CGSize upwardsArrowSize;
+@property (nonatomic, readwrite, assign) CGFloat upwardsArrowBottomInset;
+@property (nonatomic, readwrite, copy) NSShadow *upwardsArrowShadow;
+
 @end
