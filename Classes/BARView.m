@@ -36,7 +36,7 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
 
 @implementation BARView
 
-- (id)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -45,10 +45,13 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
     return self;
 }
 
-- (void)awakeFromNib;
+- (instancetype)initWithCoder:(NSCoder *)coder;
 {
-    [super awakeFromNib];
-    [self _barViewInit];
+    self = [super initWithCoder:coder];
+    if (self) {
+        [self _barViewInit];
+    }
+    return self;
 }
 
 - (void)_barViewInit;
