@@ -67,6 +67,9 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
     
     self.decelerationRate = UIScrollViewDecelerationRateFast;
     super.delegate = self;
+
+    self.barWidth = kBarViewDefaultBarWidth;
+    self.axisHeight = kBarAxisViewDefaultHeight;
 }
 
 - (void)reloadData;
@@ -203,8 +206,8 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
 {
     self.contentInset = ({
         CGFloat vertical = 0.0;
-        CGFloat horizontal = floor(CGRectGetWidth(self.frame) / 2.0) - floor(kBarViewDefaultBarWidth / 2.0);
-        horizontal = round(horizontal / kBarViewDefaultBarWidth) * kBarViewDefaultBarWidth;
+        CGFloat horizontal = floor(CGRectGetWidth(self.frame) / 2.0) - floor(self.barWidth / 2.0);
+        horizontal = round(horizontal / self.barWidth) * self.barWidth;
         UIEdgeInsetsMake(vertical, horizontal, vertical, horizontal);
     });
 }
@@ -284,9 +287,9 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
 
 - (NSInteger)indexForBarAtPoint:(CGPoint)point clamp:(BOOL)clamp;
 {
-    NSInteger index = floor(point.x / kBarViewDefaultBarWidth);
+    NSInteger index = floor(point.x / self.barWidth);
     if (clamp) {
-        index = CLAMP(floor(point.x / kBarViewDefaultBarWidth), 0, [self numberOfBars] - 1);
+        index = CLAMP(floor(point.x / self.barWidth), 0, [self numberOfBars] - 1);
     }
     return index;
 }
@@ -298,23 +301,23 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
     
     CGFloat height = floor(value * self.heightFractionForVisibleBars);
     
-    return CGRectMake(index * kBarViewDefaultBarWidth,
+    return CGRectMake(index * self.barWidth,
                       availableHeight - height,
-                      kBarViewDefaultBarWidth,
+                      self.barWidth,
                       height);
 }
 
 - (CGRect)rectForVisibleLabelAtIndex:(NSInteger)index;
 {
-    return CGRectMake(index * kBarViewDefaultBarWidth,
+    return CGRectMake(index * self.barWidth,
                       0.0,
-                      kBarViewDefaultBarWidth,
-                      kBarAxisViewDefaultHeight);
+                      self.barWidth,
+                      self.axisHeight);
 }
 
 - (CGRect)rectForGridColumnAtIndex:(NSInteger)index;
 {
-    return CGRectMake(index * kBarViewDefaultBarWidth,
+    return CGRectMake(index * self.barWidth,
                       0.5,
                       0.5,
                       CGRectGetHeight([self rectForGridContainerView]) - 1.0);
@@ -360,20 +363,20 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
 - (CGRect)rectForBarsContainerView;
 {
     return CGRectMake([self horizontalOffset], 0.0,
-                      (kBarViewDefaultBarWidth * [self numberOfBars]) + ([self horizontalOffset] * 2.0),
-                      CGRectGetHeight(self.bounds) - kBarAxisViewDefaultHeight);
+                      (self.barWidth * [self numberOfBars]) + ([self horizontalOffset] * 2.0),
+                      CGRectGetHeight(self.bounds) - self.axisHeight);
 }
 
 - (CGRect)rectForAxisContainerView;
 {
     CGRect barsRect = [self rectForBarsContainerView];
     
-    return CGRectMake([self horizontalOffset], CGRectGetMaxY(barsRect), (kBarViewDefaultBarWidth * [self numberOfBars]) * 2.0, kBarAxisViewDefaultHeight);
+    return CGRectMake([self horizontalOffset], CGRectGetMaxY(barsRect), (self.barWidth * [self numberOfBars]) * 2.0, self.axisHeight);
 }
 
 - (CGRect)rectForGridContainerView;
 {
-    return CGRectMake([self horizontalOffset], 0.0, (kBarViewDefaultBarWidth * [self numberOfBars]) * 2.0, CGRectGetHeight(self.bounds));
+    return CGRectMake([self horizontalOffset], 0.0, (self.barWidth * [self numberOfBars]) * 2.0, CGRectGetHeight(self.bounds));
 }
 
 - (CGRect)rectForSelectionIndicatorView;
@@ -382,10 +385,10 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
         return CGRectZero;
     }
     
-    CGFloat width = kBarViewDefaultBarWidth;
+    CGFloat width = self.barWidth;
     CGFloat height = CGRectGetHeight([self rectForBarsContainerView]);
     
-    CGFloat x = self.contentOffset.x + floor(CGRectGetWidth(self.frame) / 2.0) - floor(kBarViewDefaultBarWidth / 2.0);
+    CGFloat x = self.contentOffset.x + floor(CGRectGetWidth(self.frame) / 2.0) - floor(self.barWidth / 2.0);
     CGFloat y = 0.0;
     return CGRectMake(x, y, width, height);
 }
@@ -402,7 +405,7 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
 - (CGRect)rectForBottomDividerView;
 {
     CGFloat x = CGRectGetMinX(self.bounds);
-    CGFloat y = CGRectGetHeight(self.bounds) - kBarAxisViewDefaultHeight - 0.5;
+    CGFloat y = CGRectGetHeight(self.bounds) - self.axisHeight - 0.5;
     CGFloat width = CGRectGetWidth(self.bounds);
     CGFloat height = 0.5;
     return CGRectMake(x, y, width, height);
@@ -468,7 +471,7 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
     // This method calculates what offset the bars (or actually the view containing the bars) need to be displayed at
     // in order to match up with the selection indicator.
     // Completing our initial example. The first bar will now be displayed at x=10 and the second bar at x=35.
-    return (floor(CGRectGetWidth(self.frame) / 2.0) - floor(kBarViewDefaultBarWidth / 2.0)) - self.contentInset.left;
+    return (floor(CGRectGetWidth(self.frame) / 2.0) - floor(self.barWidth / 2.0)) - self.contentInset.left;
 }
 
 - (id<UIScrollViewDelegate>)delegate;
