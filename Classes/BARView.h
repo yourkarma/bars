@@ -45,6 +45,8 @@ extern CGFloat const kBarAxisViewDefaultHeight;
 - (UIView *)labelViewForBarAtIndex:(NSInteger)index;
 - (CGRect)rectForVisibleLabelAtIndex:(NSInteger)index;
 
+- (CGRect)rectForSelectionIndicatorView;
+
 - (NSUInteger)indexOfSelectedBar;
 
 - (void)selectBarAtIndex:(NSUInteger)index;
