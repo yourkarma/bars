@@ -36,7 +36,7 @@
 {
     (*targetContentOffset).x = ({
         CGFloat x = (*targetContentOffset).x;
-        x = (round(x / kBarViewDefaultBarWidth) * kBarViewDefaultBarWidth);
+        x = (round(x / self.barWidth) * self.barWidth);
         x;
     });
     
