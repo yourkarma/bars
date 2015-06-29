@@ -17,7 +17,7 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
 #define CLAMP(x, low, high)  (((x) > (high)) ? (high) : (((x) < (low)) ? (low) : (x)))
 
 @interface BARView () <UIScrollViewDelegate>
-@property (nonatomic, readwrite, assign) id internalDelegate;
+@property (nonatomic, readwrite, weak) id internalDelegate;
 
 @property (nonatomic, readwrite, copy) NSArray *cachedValues;
 @property (nonatomic, readwrite, strong) NSMutableDictionary *cachedLabelViews;
