@@ -8,6 +8,9 @@
 
 #import "BARView+UIScrollViewDelegate.h"
 
+@interface BARView ()
+- (CGPoint)targetContentOffsetForContentOffset:(CGPoint)point;
+@end
 
 @implementation BARView (UIScrollViewDelegate)
 
@@ -34,11 +37,7 @@
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset;
 {
-    (*targetContentOffset).x = ({
-        CGFloat x = (*targetContentOffset).x;
-        x = (round(x / self.barWidth) * self.barWidth);
-        x;
-    });
+    *targetContentOffset = [self targetContentOffsetForContentOffset:*targetContentOffset];
     
     if ([self.delegate respondsToSelector:_cmd]) {
         [self.delegate scrollViewWillEndDragging:scrollView withVelocity:velocity targetContentOffset:targetContentOffset];

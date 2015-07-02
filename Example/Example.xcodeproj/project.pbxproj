@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		281D4D9EA53E4BB7A4E48C81 /* libPods-Bars.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8197881EAA29480084692B1D /* libPods-Bars.a */; };
 		A13428BA19113E63002CD8C5 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A13428B919113E63002CD8C5 /* Main_iPad.storyboard */; };
 		A15A70F3191173D500946134 /* BARView.m in Sources */ = {isa = PBXBuildFile; fileRef = A15A70F1191173D500946134 /* BARView.m */; };
 		A1668688192BE83300B8987D /* BARSelectionIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1668687192BE83300B8987D /* BARSelectionIndicatorView.m */; };
@@ -62,7 +61,6 @@
 				A1CD701F191136D50094A8DD /* CoreGraphics.framework in Frameworks */,
 				A1CD7021191136D50094A8DD /* UIKit.framework in Frameworks */,
 				A1CD701D191136D50094A8DD /* Foundation.framework in Frameworks */,
-				281D4D9EA53E4BB7A4E48C81 /* libPods-Bars.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,11 +156,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1CD7051191136D50094A8DD /* Build configuration list for PBXNativeTarget "Bars" */;
 			buildPhases = (
-				994964594421403AA320AE36 /* Check Pods Manifest.lock */,
 				A1CD7015191136D50094A8DD /* Sources */,
 				A1CD7016191136D50094A8DD /* Frameworks */,
 				A1CD7017191136D50094A8DD /* Resources */,
-				C68AA7DEAD034C5A975B8E55 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,39 +210,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		994964594421403AA320AE36 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		C68AA7DEAD034C5A975B8E55 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-Bars-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A1CD7015191136D50094A8DD /* Sources */ = {

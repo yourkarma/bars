@@ -192,7 +192,7 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
 
     [self bringSubviewToFront:self.gridContainerView];
     [self bringSubviewToFront:self.selectionIndicatorView];
-    
+
     self.contentSize = self.barsContainerView.frame.size;
 }
 
@@ -382,6 +382,11 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
     return CGRectMake([self horizontalOffset], 0.0, (self.barWidth * [self numberOfBars]) * 2.0, CGRectGetHeight(self.bounds));
 }
 
+- (CGPoint)targetContentOffsetForContentOffset:(CGPoint)point {
+    point.x = (round(point.x / self.barWidth) * self.barWidth);
+    return point;
+}
+
 - (CGRect)rectForSelectionIndicatorView;
 {
     if (!self.showsSelectionIndicator || [self numberOfBars] <= 0) {
@@ -390,8 +395,15 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
     
     CGFloat width = self.barWidth;
     CGFloat height = CGRectGetHeight([self rectForBarsContainerView]);
-    
-    CGFloat x = self.contentOffset.x + floor(CGRectGetWidth(self.frame) / 2.0) - floor(self.barWidth / 2.0);
+
+    CGPoint contentOffset = CGPointZero;
+    if (self.isTracking || self.isDragging) {
+        contentOffset = self.contentOffset;
+    } else {
+        contentOffset = [self targetContentOffsetForContentOffset:self.contentOffset];
+    }
+
+    CGFloat x = contentOffset.x + floor(CGRectGetWidth(self.frame) / 2.0) - floor(self.barWidth / 2.0);
     CGFloat y = 0.0;
     return CGRectMake(x, y, width, height);
 }
