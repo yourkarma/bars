@@ -397,7 +397,7 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
     CGFloat height = CGRectGetHeight([self rectForBarsContainerView]);
 
     CGPoint contentOffset = CGPointZero;
-    if (self.isTracking || self.isDragging) {
+    if (self.isTracking || self.isDragging || self.decelerating) {
         contentOffset = self.contentOffset;
     } else {
         contentOffset = [self targetContentOffsetForContentOffset:self.contentOffset];
