@@ -32,6 +32,8 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
 @property (nonatomic, readwrite, strong) UIView *bottomDividerView;
 
 @property (nonatomic, readwrite, assign) CGFloat heightFractionForVisibleBars;
+
+@property (nonatomic, readwrite, assign) NSInteger selectionIndex;
 @end
 
 @implementation BARView
@@ -143,7 +145,7 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
 - (void)layoutSubviews;
 {
     [super layoutSubviews];
-    
+
     [self centerContent];
 
     NSRange visibleRange = [self visibleRange];
@@ -194,6 +196,12 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
     [self bringSubviewToFront:self.selectionIndicatorView];
 
     self.contentSize = self.barsContainerView.frame.size;
+
+    if (!self.isTracking && !self.isDragging && !self.isDecelerating && self.selectionIndex != [self indexOfSelectedBar]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self selectBarAtIndex:self.selectionIndex];
+        });
+    }
 }
 
 - (CGFloat)heightFractionWithAvailableHeight:(CGFloat)height maxValue:(CGFloat)maxValue;
@@ -353,7 +361,7 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
     if (!NSLocationInRange(index, range)) {
         index = NSMaxRange(range);
     }
-    
+
     CGPoint offset = ({
         CGPoint offset = [self rectForVisibleBarAtIndex:index].origin;
         offset.x -= self.contentInset.left;
@@ -361,6 +369,7 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
         offset;
     });
     [self setContentOffset:offset animated:animated];
+    self.selectionIndex = index;
 }
 
 - (CGRect)rectForBarsContainerView;

@@ -21,7 +21,7 @@
 		A1B19D741911345C00B5D97D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B19D481911340D00B5D97D /* Foundation.framework */; };
 		A1B19D751911345C00B5D97D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B19D591911340D00B5D97D /* UIKit.framework */; };
 		A1CD6F3A1911352E0094A8DD /* BARView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1CD6F391911352E0094A8DD /* BARView.m */; };
-		DCD2EF476A504EAF91C3268A /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73FDB67F06454F82BF50B843 /* libPods-Specs.a */; };
+		B235C075C4E6879286A0D0FC /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 520BC9A0B600AE6824B2D9FF /* libPods-Specs.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,9 +47,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0B51E3DC6CC2F6591383245A /* Pods-Specs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.debug.xcconfig"; sourceTree = "<group>"; };
-		73FDB67F06454F82BF50B843 /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		95FE5F156B178876566D2864 /* Pods-Specs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.release.xcconfig"; sourceTree = "<group>"; };
+		50DE0693045F0A4A68E60329 /* Pods-Specs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.release.xcconfig"; sourceTree = "<group>"; };
+		520BC9A0B600AE6824B2D9FF /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B16BED0ED14A90E2A0630B5 /* Pods-Specs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.debug.xcconfig"; sourceTree = "<group>"; };
 		A10BAF61191A8AFF00F4115C /* BARView+SelectionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BARView+SelectionSpec.m"; sourceTree = "<group>"; };
 		A15A71381911763E00946134 /* BARViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BARViewSpec.m; sourceTree = "<group>"; };
 		A1668681192BCF9D00B8987D /* BARView+GridSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BARView+GridSpec.m"; sourceTree = "<group>"; };
@@ -86,18 +86,18 @@
 				A1B19D731911345C00B5D97D /* XCTest.framework in Frameworks */,
 				A1B19D751911345C00B5D97D /* UIKit.framework in Frameworks */,
 				A1B19D741911345C00B5D97D /* Foundation.framework in Frameworks */,
-				DCD2EF476A504EAF91C3268A /* libPods-Specs.a in Frameworks */,
+				B235C075C4E6879286A0D0FC /* libPods-Specs.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3496D2C4E6B882B41CF9C6C4 /* Pods */ = {
+		7CD908CEFFE0982519C22D8A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0B51E3DC6CC2F6591383245A /* Pods-Specs.debug.xcconfig */,
-				95FE5F156B178876566D2864 /* Pods-Specs.release.xcconfig */,
+				7B16BED0ED14A90E2A0630B5 /* Pods-Specs.debug.xcconfig */,
+				50DE0693045F0A4A68E60329 /* Pods-Specs.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -109,7 +109,7 @@
 				A1B19D761911345C00B5D97D /* Specs */,
 				A1B19D471911340D00B5D97D /* Frameworks */,
 				A1B19D461911340D00B5D97D /* Products */,
-				3496D2C4E6B882B41CF9C6C4 /* Pods */,
+				7CD908CEFFE0982519C22D8A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,7 +128,7 @@
 				A1B19D481911340D00B5D97D /* Foundation.framework */,
 				A1B19D561911340D00B5D97D /* XCTest.framework */,
 				A1B19D591911340D00B5D97D /* UIKit.framework */,
-				73FDB67F06454F82BF50B843 /* libPods-Specs.a */,
+				520BC9A0B600AE6824B2D9FF /* libPods-Specs.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -192,11 +192,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1B19D811911345C00B5D97D /* Build configuration list for PBXNativeTarget "Specs" */;
 			buildPhases = (
-				61D9A11C9625442CB6FD83FB /* Check Pods Manifest.lock */,
+				FF5DDC71C8692AAC2D5A2376 /* Check Pods Manifest.lock */,
 				A1B19D6E1911345C00B5D97D /* Sources */,
 				A1B19D6F1911345C00B5D97D /* Frameworks */,
 				A1B19D701911345C00B5D97D /* Resources */,
-				E18F67D2E6A44D0F98F42252 /* Copy Pods Resources */,
+				25B522EE8E784E2181886D30 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,22 +252,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		61D9A11C9625442CB6FD83FB /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		E18F67D2E6A44D0F98F42252 /* Copy Pods Resources */ = {
+		25B522EE8E784E2181886D30 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -280,6 +265,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Specs/Pods-Specs-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF5DDC71C8692AAC2D5A2376 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -393,7 +393,6 @@
 			buildSettings = {
 				DSTROOT = /tmp/Bars.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -404,7 +403,6 @@
 			buildSettings = {
 				DSTROOT = /tmp/Bars.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -412,7 +410,7 @@
 		};
 		A1B19D821911345C00B5D97D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B51E3DC6CC2F6591383245A /* Pods-Specs.debug.xcconfig */;
+			baseConfigurationReference = 7B16BED0ED14A90E2A0630B5 /* Pods-Specs.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -431,7 +429,7 @@
 		};
 		A1B19D831911345C00B5D97D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95FE5F156B178876566D2864 /* Pods-Specs.release.xcconfig */;
+			baseConfigurationReference = 50DE0693045F0A4A68E60329 /* Pods-Specs.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

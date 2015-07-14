@@ -24,7 +24,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		15B5885833AE448A885615E5 /* Pods-Bars.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bars.xcconfig"; path = "Pods/Pods-Bars.xcconfig"; sourceTree = "<group>"; };
 		282D27C803D44690A8D182AA /* libPods-Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8197881EAA29480084692B1D /* libPods-Bars.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bars.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13428B919113E63002CD8C5 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
@@ -96,7 +95,6 @@
 				A1CD701B191136D50094A8DD /* Frameworks */,
 				A1CD701A191136D50094A8DD /* Products */,
 				A15A70ED191173CC00946134 /* Vendor */,
-				15B5885833AE448A885615E5 /* Pods-Bars.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -320,7 +318,6 @@
 		};
 		A1CD7052191136D50094A8DD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15B5885833AE448A885615E5 /* Pods-Bars.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -334,7 +331,6 @@
 		};
 		A1CD7053191136D50094A8DD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15B5885833AE448A885615E5 /* Pods-Bars.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

@@ -9,6 +9,7 @@
 #import "BARView+UIScrollViewDelegate.h"
 
 @interface BARView ()
+@property (nonatomic, readwrite, assign) NSInteger selectionIndex;
 - (CGPoint)targetContentOffsetForContentOffset:(CGPoint)point;
 @end
 
@@ -60,6 +61,8 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView;
 {
+    self.selectionIndex = [self indexForBarAtPoint:self.rectForSelectionIndicatorView.origin];
+
     if ([self.delegate respondsToSelector:_cmd]) {
         [self.delegate scrollViewDidEndDecelerating:scrollView];
     }
