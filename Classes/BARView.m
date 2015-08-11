@@ -204,6 +204,11 @@ CGFloat const kBarAxisViewDefaultHeight = 65.0;
     }
 }
 
+- (void)setSelectionIndex:(NSInteger)selectionIndex;
+{
+    _selectionIndex = selectionIndex;
+}
+
 - (CGFloat)heightFractionWithAvailableHeight:(CGFloat)height maxValue:(CGFloat)maxValue;
 {
     if (maxValue == 0) {
